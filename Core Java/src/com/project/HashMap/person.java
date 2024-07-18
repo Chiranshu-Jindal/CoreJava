@@ -4,6 +4,9 @@ class person{
     private String mobile;
     private String email;   
     private Relation relations;
+    private int age;
+    private salarystructure salary;
+    private salarystructure occupation;
     
     public void setName(String name) {
     	this.name=name;
@@ -19,6 +22,18 @@ class person{
     
     public void setRelations(Relation relations) {
     	this.relations=relations;
+    }
+    
+    public void setAge(int age){
+    	this.age =age;
+    }
+    
+    public void setsalary(salarystructure salary) {
+    	this.salary=salary;
+    }
+    
+    public void setoccupation(salarystructure occupation) {
+    	this.occupation=occupation;
     }
     
     public String getName(){
@@ -37,5 +52,19 @@ class person{
     	return relations;
     }
     
+    public int getAge() {
+    	return age;
+    }
+    public salarystructure getsalary() {
+    	return salary;
+    }
+    
+    public salarystructure getoccupation() {
+    	return occupation;
+    }
+    
+    
     
 }
+
+
