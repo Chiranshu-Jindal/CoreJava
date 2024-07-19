@@ -1,11 +1,11 @@
 package com.project.HashMap;
-class person{
+class Person{
 	private int age;
     private String name;
     private String mobile;
     private String email;   
     private Relation relations;
-    private salarystructure salarystu; 
+    private Salarystructure salarystu; 
 	  
     
     public void setName(String name) {
@@ -28,7 +28,7 @@ class person{
     	this.age =age;
     }
     
-    public void setsalarystu(salarystructure salarystu) {
+    public void setsalarystu(Salarystructure salarystu) {
     	this.salarystu=salarystu;
     }
     
@@ -51,7 +51,7 @@ class person{
     public int getAge() {
     	return age;
     }
-    public salarystructure getsalarystu() {
+    public Salarystructure getsalarystu() {
     	return salarystu;
     }
     

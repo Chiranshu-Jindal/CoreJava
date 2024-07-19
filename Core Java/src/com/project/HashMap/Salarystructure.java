@@ -1,6 +1,6 @@
 package com.project.HashMap;
 
-public class salarystructure {
+public class Salarystructure {
 
 		private double salary;
 		private String occupation;
