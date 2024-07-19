@@ -17,17 +17,26 @@ public class Mainclass {
 		int userkey = input.nextInt();		
 			
 		if(societydata.containsKey(userkey)) {	
+			double totalincome=0;
 			ArrayList<person> retrievedItem = societydata.get(userkey);
 			System.out.println("Total numbers of person in the appartment no.: "+ userkey + " are " + retrievedItem.size());
 			for(int i = 0 ; i< retrievedItem.size();i++)
 			{
 				person p = retrievedItem.get(i);
-				salarystructure s = p.getsalary();
-	            System.out.println("person "+ (i+1) +","+p.getName()+"," + p.getRelations()+","+p.getEmail()+","+p.getAge()+","+ p.getMobile()+","+s.getoccupation()+","+s.getsalary());
-			}
+				salarystructure s = p.getsalarystu();
+	            System.out.print("person "+ (i+1) +","+p.getName()+"," + p.getRelations()+","+p.getEmail()+","+p.getAge()+","+ p.getMobile());
+	            
+	            if(s!=null) {
+	            	System.out.print(","+s.getOccupation());
+	            	System.out.print(","+s.getsalary());
+	            	totalincome += s.getsalary();
+	            }
+	        System.out.println();
+		  	}
+			System.out.println("total income of this appartment is "+totalincome);
 		}
 			else
-			{
+			{	
 				System.out.println("the room number is wrong");
 			}
 			input.close();
