@@ -3,11 +3,14 @@ package com.project.HashMap;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Mainclass {
 
 	public static void main(String[] args) {
-	
+		
 		Scanner input = new Scanner(System.in);
 		Populatedsocietydata data = new Populatedsocietydata();
 		HashMap<Integer, ArrayList<Person>> societydata = new HashMap<>();
@@ -31,7 +34,7 @@ public class Mainclass {
 	            	System.out.print(","+s.getsalary());
 	            	totalincome += s.getsalary();
 	            }
-	        System.out.println();
+	        System.out.println();	
 		  	}
 			System.out.println("total income of this appartment is "+totalincome);
 		}
